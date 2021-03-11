@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>meniu restaurant</title>
+    <style>
+body {
+    background-color: #456;
+    font-family:  Helvetica;
+    margin: 0;
+}
+.menu-nav{
+    
+    background-color: #345 ;
+    margin-left: -150px;
+    width: 220px;
+    transition: 0.5s;
+}
+.menu-nav:target{
+    margin-left: 0px;
+}
+.menu-title {
+    margin: 0px;
+    color: white;
+   padding: 20px 10px; 
+}
+.menu-list {
+    display: inline-block;
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+}
+li{
+
+}
+li:first-child{
+    border-top: 1px solid#567;
+}
+a{
+    text-decoration: none;
+   /* background-color: green;*/
+    padding:5px 10px;
+    display: block;
+    color: #ddd;
+    border-bottom: 1px solid #567;
+    border-right: 1px solid #567;
+}
+a:hover{
+    color: white;
+    background-color: #234;
+}
+.unavailable::before{
+   content: "✗";
+   color: red;
+}
+a::before{
+    content: "✓";
+    color: green;
+    padding-right: 10px;
+}
+/*a::after{
+   content: "-";
+}*/
+.toggler::before{
+    display: none
+}
+
+.toggler{
+    width: 50px ;
+    height: 50px;
+    padding: 5px;
+    background-color: brown;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 60px;
+    display: inline-block;
+    vertical-align: top;
+    }
+    
+   
+    </style>
+</head>
+<body>
+
+    <nav class="menu-nav" id="menu">
+        <h2 class="menu-title">Our Cuisine</h2>
+   <ul class="menu-list">
+       <li><a href="#">Salat</a></li>
+       <li><a href="#">Soup</a></li>
+       <li><a href="#">Pizza</a></li>
+       <li><a class="unavailable" href="#">Kebab</a></li>
+       <li><a href="#">Burger</a></li>
+   </ul> 
+     <a href="#menu" class="toggler">MENU</a></div>
+     </nav>
+</body>
+</html>
